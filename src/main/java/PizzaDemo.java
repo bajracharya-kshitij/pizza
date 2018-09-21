@@ -7,18 +7,15 @@ public class PizzaDemo {
         System.out.println("Welcome to pizza store!");
 
         Pizza smallPizza = new SmallPizza();
-        smallPizza.setSize();
-        smallPizza.printPizza();
-        System.out.println("The size of the pizza is: " + smallPizza.getSize());
+        smallPizza.build();
+        System.out.println("The size of the pizza is " + smallPizza.size + " and it costs $" + smallPizza.cost);
 
         Pizza mediumPizza = new MediumPizza();
-        mediumPizza.setSize();
-        mediumPizza.printPizza();
-        System.out.println("The size of the pizza is: " + mediumPizza.getSize());
+        mediumPizza.build();
+        System.out.println("The size of the pizza is " + mediumPizza.size + " and it costs $" + mediumPizza.cost);
 
         Pizza largePizza = new LargePizza();
-        largePizza.setSize();
-        largePizza.printPizza();
-        System.out.println("The size of the pizza is: " + largePizza.getSize());
+        largePizza.build();
+        System.out.println("The size of the pizza is " + largePizza.size + " and it costs $" + largePizza.cost);
     }
 }

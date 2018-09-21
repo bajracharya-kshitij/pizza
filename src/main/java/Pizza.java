@@ -6,16 +6,8 @@ import java.util.Set;
 public abstract class Pizza {
 
     protected String size;
-    protected Double cost;
+    protected int cost;
     protected Set<String> toppings;
 
-    public void printPizza() {
-        System.out.println("a type of pizza");
-    }
-
-    public String getSize() {
-        return this.size;
-    }
-
-    abstract public void setSize();
+    abstract public void build();
 }
