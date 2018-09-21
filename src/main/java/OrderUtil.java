@@ -54,6 +54,6 @@ public class OrderUtil {
         } else {
             System.out.println("\nYou can now collect your order!");
         }
-        System.out.println("\nThank you for shopping with the Pizza Store! Enjoy and do come again :)");
+        System.out.println("\nThank you for ordering at the Pizza Store! Enjoy and do come again :)");
     }
 }
