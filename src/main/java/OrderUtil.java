@@ -1,5 +1,3 @@
-import com.sun.deploy.util.StringUtils;
-
 import java.util.ArrayList;
 
 /**
@@ -13,7 +11,16 @@ public class OrderUtil {
         System.out.println("a " + size + " pizza with tomato base and cheese topping. ");
         if(toppings.size() > 0) {
             System.out.print("You've also added ");
-            System.out.print(StringUtils.join(toppings, ","));
+            for(int i=0; i<toppings.size(); i++) {
+                System.out.print(toppings.get(i));
+                if(toppings.size() > 1) {
+                    if(i == (toppings.size() - 2)) {
+                        System.out.print(" and ");
+                    } else if(i != (toppings.size() - 1)){
+                        System.out.print(", ");
+                    }
+                }
+            }
             System.out.print(" as additional topping(s)\n");
         }
     }
