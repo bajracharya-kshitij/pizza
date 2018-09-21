@@ -4,7 +4,7 @@
 public class MediumPizza extends Pizza {
 
     @Override
-    public void build() {
+    public void specifySizeAndCost() {
         this.size = "Medium";
         this.cost = 8;
     }

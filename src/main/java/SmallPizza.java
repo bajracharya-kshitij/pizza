@@ -5,7 +5,7 @@ public class SmallPizza extends Pizza {
 
 
     @Override
-    public void build() {
+    public void specifySizeAndCost() {
         this.size = "Small";
         this.cost = 5;
     }

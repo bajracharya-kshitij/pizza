@@ -1,25 +1,22 @@
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Set;
 
 /**
  * Created by kshitij on 9/21/18.
  */
 public class PizzaDemo {
 
-    public static double totalCost = 0;
-
     public static void main(String[] args) {
         System.out.println("Welcome to pizza store!");
 
-        Set<Pizza> pizzas = getOrders();
+        ArrayList<Pizza> pizzas = getOrders();
 
-        displayFinalOrderWithTotalCost(pizzas);
+        OrderUtil.displayFinalOrder(pizzas);
     }
 
-    private static Set<Pizza> getOrders() {
+    private static ArrayList<Pizza> getOrders() {
         boolean endOfOrder = false;
-        Set<Pizza> pizzas = new HashSet<Pizza>();
+        ArrayList<Pizza> pizzas = new ArrayList<Pizza>();
         Scanner scanner = new Scanner(System.in);
 
         Pizza pizza;
@@ -50,14 +47,5 @@ public class PizzaDemo {
             pizza = buildPizza();
         }
         return pizza;
-    }
-
-    private static void displayFinalOrderWithTotalCost(Set<Pizza> pizzas) {
-        System.out.println("Your order is ready. You have ");
-        for(Pizza p : pizzas) {
-            System.out.println("A "+ p.size + " pizza worth $" + p.cost);
-            totalCost += p.cost;
-        }
-        System.out.println("That'll be $" + totalCost);
     }
 }
