@@ -61,6 +61,8 @@ public abstract class Pizza {
             }
         } else if(selectedToppingId == PIZZA_TOPPINGS.size()+1) {
             finishedAddingToppings = true;
+        } else {
+            System.out.println("That's not a valid input. Please choose from the available options");
         }
         return finishedAddingToppings;
     }
