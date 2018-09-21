@@ -41,8 +41,14 @@ public class PizzaDemo {
 
         PizzaFactory pizzaFactory = new PizzaFactory();
 
-        Pizza pizza = pizzaFactory.getPizza(size);
-        pizza.build();
+        Pizza pizza = null;
+        try {
+            pizza = pizzaFactory.getPizza(size);
+            pizza.build();
+        } catch (Exception e) {
+            System.out.println("That's not a valid input");
+            pizza = buildPizza();
+        }
         return pizza;
     }
 
